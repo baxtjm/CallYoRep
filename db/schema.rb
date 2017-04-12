@@ -10,24 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170406204414) do
+ActiveRecord::Schema.define(version: 20170412202658) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "issues", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "topic"
-  end
-
-  create_table "messages", force: :cascade do |t|
+  create_table "calls", force: :cascade do |t|
     t.string   "position"
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "issue_id"
-    t.index ["issue_id"], name: "index_messages_on_issue_id", using: :btree
+    t.index ["issue_id"], name: "index_calls_on_issue_id", using: :btree
+  end
+
+  create_table "issues", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "topic"
   end
 
   create_table "users", force: :cascade do |t|
@@ -39,6 +39,6 @@ ActiveRecord::Schema.define(version: 20170406204414) do
     t.index ["message_id"], name: "index_users_on_message_id", using: :btree
   end
 
-  add_foreign_key "messages", "issues"
-  add_foreign_key "users", "messages"
+  add_foreign_key "calls", "issues"
+  add_foreign_key "users", "calls", column: "message_id"
 end

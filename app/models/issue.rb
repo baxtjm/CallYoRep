@@ -1,3 +1,3 @@
 class Issue < ApplicationRecord
-  has_many :messages, dependent: :destroy
+  has_many :calls, dependent: :destroy
 end

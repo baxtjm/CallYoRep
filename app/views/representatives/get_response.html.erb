@@ -1,11 +1,25 @@
 <div >
 
-<%@results.each do |rep|%>
-<div>
-  <%=rep%>
-</div>
+<%@info.each do |rep|%>
+  <div>
+    <%rep.each do |x|%>
+      <%unless x == rep.last%>
+        <%=x  %>,&nbsp;
+      <%else%>
+        <%=x  %>
+      <%end%>
+    <%end%>
+    <img src="https://theunitedstates.io/images/congress/225x275/<%=rep.last%>.jpg" alt="">
+  </div>
+  <br />
 <%end%>
 </div>
 
-
-<h2>test</h2>
+<div>@names: <%=@names%></div> <br>
+<div>@info: <%=@info%></div> <br>
+<div>@ids: <%=@ids%></div><br>
+<div>@reps: <%=@reps%></div><br>
+<div>@results: <%=@results%></div>
+<br />
+<br />
+<br />

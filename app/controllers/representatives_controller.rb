@@ -7,14 +7,13 @@ class RepresentativesController < ApplicationController
     @response = HTTParty.get("http://whoismyrepresentative.com/getall_mems.php?zip=#{@zip}&output=json", format: :plain)
     @congress = HTTParty.get("https://raw.githubusercontent.com/unitedstates/congress-legislators/master/alternate_formats/legislators-current.json", format: :plain)
 
-    @reps = (JSON.parse @response, symbolize_names: true)[:results]
+    @reps = (JSON.parse @response, symbolize_names: true)[:results].uniq
     @results = (JSON.parse @congress, symbolize_names: true)
     @info = []
     @names = []
 
     @reps.each do |rep|
       @names << rep[:name]
-      
     end
 
      @reps.each do |rep|

@@ -1,1 +1,8 @@
-<h1><%=@reps%></h1>
+
+<%@prep.each do |reps|%>
+  <%= reps.each do |rep| %>
+  <div >
+    rep
+  </div>
+  <%end%>
+  <%end%>

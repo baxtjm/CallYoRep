@@ -14,6 +14,7 @@ class RepresentativesController < ApplicationController
 
     @reps.each do |rep|
       @names << rep[:name]
+      
     end
 
      @reps.each do |rep|

@@ -1,8 +1,7 @@
-require 'twilio-ruby'
-
 class TwilioController < ApplicationController
   include Webhookable
 
+  before_action :set_phone
   after_action :set_header
 
   skip_before_action :verify_authenticity_token
@@ -19,7 +18,7 @@ class TwilioController < ApplicationController
 
     @call = @client.account.calls
       .create(:url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiML Bin
-              :to => "+15165786248", #tie to representatives controller
+              :to => "#{@phone}", #tie to representatives controller
               :from => "+18573133666")
     puts call.to
   end
@@ -35,7 +34,7 @@ class TwilioController < ApplicationController
 
     @call = @client.account.calls
       .create(:url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
-              :to => "+15165786248", #tie to representatives controller
+              :to => "#{@phone}"
               :from => "+18573133666")
     puts call.to
   end
@@ -51,7 +50,7 @@ class TwilioController < ApplicationController
 
     @call = @client.account.calls
       .create(:url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
-              :to => "+15165786248", #tie to representatives controller
+              :to => "#{@phone}", #tie to representatives controller
               :from => "+18573133666")
     puts call.to
   end
@@ -67,7 +66,7 @@ class TwilioController < ApplicationController
 
     @call = @client.account.calls
       .create(:url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
-              :to => "+15165786248", #tie to representatives controller
+              :to => "#{@phone}", #tie to representatives controller
               :from => "+18573133666")
     puts call.to
   end
@@ -83,7 +82,7 @@ class TwilioController < ApplicationController
 
     @call = @client.account.calls
       .create(:url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
-              :to => "+15165786248", #tie to representatives controller
+              :to => "#{@phone}", #tie to representatives controller
               :from => "+18573133666")
     puts call.to
   end
@@ -99,7 +98,7 @@ class TwilioController < ApplicationController
 
     @call = @client.account.calls
       .create(:url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
-              :to => "+15165786248", #tie to representatives controller
+              :to => "#{@phone}", #tie to representatives controller
               :from => "+18573133666")
     puts call.to
   end
@@ -115,7 +114,7 @@ class TwilioController < ApplicationController
 
     @call = @client.account.calls
       .create(:url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
-              :to => "+15165786248", #tie to representatives controller
+              :to => "#{@phone}", #tie to representatives controller
               :from => "+18573133666")
     puts call.to
   end
@@ -131,12 +130,16 @@ class TwilioController < ApplicationController
 
     @call = @client.account.calls
       .create(:url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
-              :to => "+15165786248", #tie to representatives controller
+              :to => "#{@phone}", #tie to representatives controller
               :from => "+18573133666")
     puts call.to
   end
 
+private
 
+def set_phone
+  @rep = "919-548-4308"#params[:rep_choice]
+end
 
 
  end

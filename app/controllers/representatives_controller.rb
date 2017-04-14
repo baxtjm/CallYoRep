@@ -11,6 +11,7 @@ class RepresentativesController < ApplicationController
     @results = (JSON.parse @congress, symbolize_names: true)
     @info = []
     @names = []
+    @phones = []
 
     @reps.each do |rep|
       @names << rep[:name]
@@ -21,6 +22,7 @@ class RepresentativesController < ApplicationController
           if rep[:name] == (data[:name][:first] + " " + data[:name][:last])
             @id = data[:id][:bioguide]
             @info << [rep[:name], rep[:party], rep[:state], rep[:phone], @id]
+            @phones << [rep[:name], rep[:phone]]
           end
         end
      end

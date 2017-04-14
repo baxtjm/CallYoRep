@@ -7,38 +7,136 @@ class TwilioController < ApplicationController
 
   skip_before_action :verify_authenticity_token
 
-  def voice
-  	response = Twilio::TwiML::Response.new do |r|
-  	  r.Say 'Hey there. Congrats on integrating Twilio into your Rails 4 app.', :voice => 'alice'
-         r.Play 'http://linode.rabasa.com/cantina.mp3'
-  	end
 
-  	render_twiml response
+  def planned_parenthood_pro
+    # put your own credentials here - from twilio.com/user/account
+    account_sid = ENV['TWILIO_ACCOUNT_SID']
+    auth_token = ENV['TWILIO_AUTH_TOKEN']
+
+    # set up a client to talk to the Twilio REST API
+    @client = Twilio::REST::Client.new account_sid, auth_token
+
+
+    @call = @client.account.calls
+      .create(:url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiML Bin
+              :to => "+15165786248", #tie to representatives controller
+              :from => "+18573133666")
+    puts call.to
   end
 
-  def status
-  # the status can be found in params['MessageStatus']
+  def planned_parenthood_anti
+    # put your own credentials here - from twilio.com/user/account
+    account_sid = .ENV['TWILIO_ACCOUNT_SID']
+    auth_token = .ENV['TWILIO_AUTH_TOKEN']
 
-  # send back an empty response
+    # set up a client to talk to the Twilio REST API
+    @client = Twilio::REST::Client.new account_sid, auth_token
 
-  render_twiml Twilio::TwiML::Response.new
 
+    @call = @client.account.calls
+      .create(:url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
+              :to => "+15165786248", #tie to representatives controller
+              :from => "+18573133666")
+    puts call.to
   end
 
-  # def connect_customer
-  #  # mocking a db of customers, connect to real db in production
-  #  customers = {
-  #    '123' => {'phone_number' => '<your phone number here>'},
-  #    '456' => {'phone_number' => '+15553333'}
-  #  }
-  #  # accessing mocked customers db
-  #  customer = customers[params[:id]]
-  #  response = Twilio::TwiML::Response.new do |r|
-  #    r.Say 'Hello. Connecting you to the customer now.', :voice => 'alice'
-  #    r.Dial :callerId => Rails.application.secrets.twilio_phone_number do |d|
-  #      d.Number customer['phone_number']
-  #    end
-  #  end
-  #
-  #  render_twiml response
+  def aca_pro
+    # put your own credentials here - from twilio.com/user/account
+    account_sid = .ENV['TWILIO_ACCOUNT_SID']
+    auth_token = .ENV['TWILIO_AUTH_TOKEN']
+
+    # set up a client to talk to the Twilio REST API
+    @client = Twilio::REST::Client.new account_sid, auth_token
+
+
+    @call = @client.account.calls
+      .create(:url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
+              :to => "+15165786248", #tie to representatives controller
+              :from => "+18573133666")
+    puts call.to
+  end
+
+  def aca_anti
+    # put your own credentials here - from twilio.com/user/account
+    account_sid = .ENV['TWILIO_ACCOUNT_SID']
+    auth_token = .ENV['TWILIO_AUTH_TOKEN']
+
+    # set up a client to talk to the Twilio REST API
+    @client = Twilio::REST::Client.new account_sid, auth_token
+
+
+    @call = @client.account.calls
+      .create(:url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
+              :to => "+15165786248", #tie to representatives controller
+              :from => "+18573133666")
+    puts call.to
+  end
+
+  def global_warming_exists
+    # put your own credentials here - from twilio.com/user/account
+    account_sid = .ENV['TWILIO_ACCOUNT_SID']
+    auth_token = .ENV['TWILIO_AUTH_TOKEN']
+
+    # set up a client to talk to the Twilio REST API
+    @client = Twilio::REST::Client.new account_sid, auth_token
+
+
+    @call = @client.account.calls
+      .create(:url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
+              :to => "+15165786248", #tie to representatives controller
+              :from => "+18573133666")
+    puts call.to
+  end
+
+  def global_warming_fake
+    # put your own credentials here - from twilio.com/user/account
+    account_sid = .ENV['TWILIO_ACCOUNT_SID']
+    auth_token = .ENV['TWILIO_AUTH_TOKEN']
+
+    # set up a client to talk to the Twilio REST API
+    @client = Twilio::REST::Client.new account_sid, auth_token
+
+
+    @call = @client.account.calls
+      .create(:url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
+              :to => "+15165786248", #tie to representatives controller
+              :from => "+18573133666")
+    puts call.to
+  end
+
+  def muslim_ban_anti
+    # put your own credentials here - from twilio.com/user/account
+    account_sid = .ENV['TWILIO_ACCOUNT_SID']
+    auth_token = .ENV['TWILIO_AUTH_TOKEN']
+
+    # set up a client to talk to the Twilio REST API
+    @client = Twilio::REST::Client.new account_sid, auth_token
+
+
+    @call = @client.account.calls
+      .create(:url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
+              :to => "+15165786248", #tie to representatives controller
+              :from => "+18573133666")
+    puts call.to
+  end
+
+  def muslim_ban_pro
+    # put your own credentials here - from twilio.com/user/account
+    account_sid = .ENV['TWILIO_ACCOUNT_SID']
+    auth_token = .ENV['TWILIO_AUTH_TOKEN']
+
+    # set up a client to talk to the Twilio REST API
+    @client = Twilio::REST::Client.new account_sid, auth_token
+
+
+    @call = @client.account.calls
+      .create(:url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
+              :to => "+15165786248", #tie to representatives controller
+              :from => "+18573133666")
+    puts call.to
+  end
+
+  
+
+
  end

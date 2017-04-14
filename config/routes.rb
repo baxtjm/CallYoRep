@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get "/rep_lookup" =>"representatives#get_response"
-  post "/rep_lookup" => ""
+  post "/rep_lookup" => "twillio#planned_parenthood_anti"
 
   post 'twilio/voice' => 'twilio#voice'
 

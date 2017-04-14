@@ -39,6 +39,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'httparty'
   gem 'hirb'
+  gem 'dotenv'
 
 end
 

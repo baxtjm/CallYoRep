@@ -51,7 +51,7 @@ class TwilioController < ApplicationController
 
     @call = @client.account.calls.create(
               :url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
-              :to => "#{@phone}", #tie to representatives controller
+              :to => "#{@rep}", #tie to representatives controller
               :from => "+18573133666")
     puts call.to
   end
@@ -67,7 +67,7 @@ class TwilioController < ApplicationController
 
     @call = @client.account.calls.create(
               :url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
-              :to => "#{@phone}", #tie to representatives controller
+              :to => "#{@rep}", #tie to representatives controller
               :from => "+18573133666")
     puts call.to
   end
@@ -83,7 +83,7 @@ class TwilioController < ApplicationController
 
     @call = @client.account.calls.create(
               :url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
-              :to => "#{@phone}", #tie to representatives controller
+              :to => "#{@rep}", #tie to representatives controller
               :from => "+18573133666")
     puts call.to
   end
@@ -99,7 +99,7 @@ class TwilioController < ApplicationController
 
     @call = @client.account.calls.create(
               :url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
-              :to => "#{@phone}", #tie to representatives controller
+              :to => "#{@rep}", #tie to representatives controller
               :from => "+18573133666")
     puts call.to
   end
@@ -115,7 +115,7 @@ class TwilioController < ApplicationController
 
     @call = @client.account.calls.create(
               :url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
-              :to => "#{@phone}", #tie to representatives controller
+              :to => "#{@rep}", #tie to representatives controller
               :from => "+18573133666")
     puts call.to
   end
@@ -131,7 +131,7 @@ class TwilioController < ApplicationController
 
     @call = @client.account.calls.create(
               :url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
-              :to => "#{@phone}",
+              :to => "#{@rep}",
               :from => "+18573133666")
     puts call.to
   end
@@ -204,7 +204,7 @@ class TwilioController < ApplicationController
 
 
 def set_phone
-  @rep = params[:rep_choice]
+  @rep = "+15165786248" #params[:rep_choice]
 end
 
 

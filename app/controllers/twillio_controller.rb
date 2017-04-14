@@ -136,7 +136,69 @@ class TwilioController < ApplicationController
     puts call.to
   end
 
+  def tax_transparency_act_pro
+    # put your own credentials here - from twilio.com/user/account
+    account_sid = ENV['TWILIO_ACCOUNT_SID']
+    auth_token = ENV['TWILIO_AUTH_TOKEN']
 
+    # set up a client to talk to the Twilio REST API
+    @client = Twilio::REST::Client.new account_sid, auth_token
+
+
+    @call = @client.account.calls
+      .create(:url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
+              :to => "+15165786248", #tie to representatives controller
+              :from => "+18573133666")
+    puts call.to
+  end
+
+  def tax_transparency_act_anti
+    # put your own credentials here - from twilio.com/user/account
+    account_sid = ENV['TWILIO_ACCOUNT_SID']
+    auth_token = ENV['TWILIO_AUTH_TOKEN']
+
+    # set up a client to talk to the Twilio REST API
+    @client = Twilio::REST::Client.new account_sid, auth_token
+
+
+    @call = @client.account.calls
+      .create(:url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
+              :to => "+15165786248", #tie to representatives controller
+              :from => "+18573133666")
+    puts call.to
+  end
+
+  def internet_privacy_pro
+    # put your own credentials here - from twilio.com/user/account
+    account_sid = ENV['TWILIO_ACCOUNT_SID']
+    auth_token = ENV['TWILIO_AUTH_TOKEN']
+
+    # set up a client to talk to the Twilio REST API
+    @client = Twilio::REST::Client.new account_sid, auth_token
+
+
+    @call = @client.account.calls
+      .create(:url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
+              :to => "+15165786248", #tie to representatives controller
+              :from => "+18573133666")
+    puts call.to
+  end
+
+  def internet_privacy_anti
+    # put your own credentials here - from twilio.com/user/account
+    account_sid = ENV['TWILIO_ACCOUNT_SID']
+    auth_token = ENV['TWILIO_AUTH_TOKEN']
+
+    # set up a client to talk to the Twilio REST API
+    @client = Twilio::REST::Client.new account_sid, auth_token
+
+
+    @call = @client.account.calls
+      .create(:url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
+              :to => "+15165786248", #tie to representatives controller
+              :from => "+18573133666")
+    puts call.to
+  end
 
 
  end

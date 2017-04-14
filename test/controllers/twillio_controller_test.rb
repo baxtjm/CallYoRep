@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TwillioControllerTest < ActionDispatch::IntegrationTest
+class TwilioControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

@@ -26,8 +26,8 @@ class TwilioController < ApplicationController
 
   def planned_parenthood_anti
     # put your own credentials here - from twilio.com/user/account
-    account_sid = .ENV['TWILIO_ACCOUNT_SID']
-    auth_token = .ENV['TWILIO_AUTH_TOKEN']
+    account_sid = ENV['TWILIO_ACCOUNT_SID']
+    auth_token = ENV['TWILIO_AUTH_TOKEN']
 
     # set up a client to talk to the Twilio REST API
     @client = Twilio::REST::Client.new account_sid, auth_token
@@ -42,8 +42,8 @@ class TwilioController < ApplicationController
 
   def aca_pro
     # put your own credentials here - from twilio.com/user/account
-    account_sid = .ENV['TWILIO_ACCOUNT_SID']
-    auth_token = .ENV['TWILIO_AUTH_TOKEN']
+    account_sid = ENV['TWILIO_ACCOUNT_SID']
+    auth_token = ENV['TWILIO_AUTH_TOKEN']
 
     # set up a client to talk to the Twilio REST API
     @client = Twilio::REST::Client.new account_sid, auth_token
@@ -58,8 +58,8 @@ class TwilioController < ApplicationController
 
   def aca_anti
     # put your own credentials here - from twilio.com/user/account
-    account_sid = .ENV['TWILIO_ACCOUNT_SID']
-    auth_token = .ENV['TWILIO_AUTH_TOKEN']
+    account_sid = ENV['TWILIO_ACCOUNT_SID']
+    auth_token = ENV['TWILIO_AUTH_TOKEN']
 
     # set up a client to talk to the Twilio REST API
     @client = Twilio::REST::Client.new account_sid, auth_token
@@ -74,8 +74,8 @@ class TwilioController < ApplicationController
 
   def global_warming_exists
     # put your own credentials here - from twilio.com/user/account
-    account_sid = .ENV['TWILIO_ACCOUNT_SID']
-    auth_token = .ENV['TWILIO_AUTH_TOKEN']
+    account_sid = ENV['TWILIO_ACCOUNT_SID']
+    auth_token = ENV['TWILIO_AUTH_TOKEN']
 
     # set up a client to talk to the Twilio REST API
     @client = Twilio::REST::Client.new account_sid, auth_token
@@ -90,8 +90,8 @@ class TwilioController < ApplicationController
 
   def global_warming_fake
     # put your own credentials here - from twilio.com/user/account
-    account_sid = .ENV['TWILIO_ACCOUNT_SID']
-    auth_token = .ENV['TWILIO_AUTH_TOKEN']
+    account_sid = ENV['TWILIO_ACCOUNT_SID']
+    auth_token = ENV['TWILIO_AUTH_TOKEN']
 
     # set up a client to talk to the Twilio REST API
     @client = Twilio::REST::Client.new account_sid, auth_token
@@ -106,8 +106,8 @@ class TwilioController < ApplicationController
 
   def muslim_ban_anti
     # put your own credentials here - from twilio.com/user/account
-    account_sid = .ENV['TWILIO_ACCOUNT_SID']
-    auth_token = .ENV['TWILIO_AUTH_TOKEN']
+    account_sid = ENV['TWILIO_ACCOUNT_SID']
+    auth_token = ENV['TWILIO_AUTH_TOKEN']
 
     # set up a client to talk to the Twilio REST API
     @client = Twilio::REST::Client.new account_sid, auth_token
@@ -122,8 +122,8 @@ class TwilioController < ApplicationController
 
   def muslim_ban_pro
     # put your own credentials here - from twilio.com/user/account
-    account_sid = .ENV['TWILIO_ACCOUNT_SID']
-    auth_token = .ENV['TWILIO_AUTH_TOKEN']
+    account_sid = ENV['TWILIO_ACCOUNT_SID']
+    auth_token = ENV['TWILIO_AUTH_TOKEN']
 
     # set up a client to talk to the Twilio REST API
     @client = Twilio::REST::Client.new account_sid, auth_token
@@ -136,7 +136,7 @@ class TwilioController < ApplicationController
     puts call.to
   end
 
-  
+
 
 
  end

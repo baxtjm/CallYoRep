@@ -17,8 +17,8 @@ class TwilioController < ApplicationController
 
 
     @call = @client.account.calls.create(
+              :to => "+15165786248",
               :url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f",
-              :to => "#{@phone}", #tie to representatives controller
               :from => "+18573133666")
     puts call.to
   end
@@ -29,14 +29,15 @@ class TwilioController < ApplicationController
     auth_token = ENV['TWILIO_AUTH_TOKEN']
 
     # set up a client to talk to the Twilio REST API
-    @client = Twilio::REST::Client.new account_sid, auth_token
+    @client = Twilio::REST::Client.new('AC6c6cc3bf0fa71451edb86c7764f07f5c', 'ce0874767990e1640ad63ae98a4c45e9')
 
 
     @call = @client.account.calls.create(
-              :url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f", #replace with twiMl Bin
-              :to => "#{@phone}"
-              :from => "+18573133666")
-    puts call.to
+              :to => "#{@rep}",
+              :from => "+18573133666",
+              :url => "https://handler.twilio.com/twiml/EH69ff54a798e003752b677cb0e3c5822f") #replace with twiMl Bin
+
+    puts @call.to
   end
 
   def aca_pro
@@ -200,10 +201,10 @@ class TwilioController < ApplicationController
   end
 
 
-private
+
 
 def set_phone
-  @rep = "919-548-4308"#params[:rep_choice]
+  @rep = params[:rep_choice]
 end
 
 

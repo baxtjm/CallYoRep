@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get "/rep_lookup" =>'representatives#get_response'
+  get "/rep_lookup" =>"representatives#get_response"
+  post "/rep_lookup" => ""
 
   post 'twilio/voice' => 'twilio#voice'
 

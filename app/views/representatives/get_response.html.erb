@@ -1,12 +1,14 @@
 <div >
 
+
 <%@info.each do |rep|%>
   <div>
     <%rep.each do |x|%>
-      <%unless x == rep.last%>
-        <%=x  %>,&nbsp;
-      <%else%>
+      <%if x == rep.last%>
+      <%elsif x == rep[-2]%>
         <%=x  %>
+      <%else%>
+        <%=x  %>,&nbsp;
       <%end%>
     <%end%>
     <img src="https://theunitedstates.io/images/congress/225x275/<%=rep.last%>.jpg" alt="">
@@ -14,3 +16,10 @@
   <br />
 <%end%>
 </div>
+
+
+
+<%= form_tag do %>
+<%= select_tag("rep_choice", options_for_select(@names)) %>
+<%=submit_tag("Submit")%>
+<%end%>

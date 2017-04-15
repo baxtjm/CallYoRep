@@ -1,6 +1,7 @@
 
 
 Rails.application.routes.draw do
+  root 'representatives#home'
 
   module TwilioRedirect
   extend self
@@ -8,7 +9,7 @@ Rails.application.routes.draw do
       @position = request.request_parameters[:position]
     end
   end
-  
+
   get "/rep_lookup" =>"representatives#get_response"
   match "/rep_lookup", :via=>:post, :controller=>"twilio", :action=>@position,  :constraints => TwilioRedirect
 

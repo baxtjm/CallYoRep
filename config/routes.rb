@@ -1,7 +1,5 @@
-
-
 Rails.application.routes.draw do
-  root 'representatives#home'
+  root 'zip#home'
 
 
 

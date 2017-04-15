@@ -1,0 +1,17 @@
+<%= form_tag("/UserModel", method: "post") do %>
+  <%= label_tag(:q, "Please Input Your Email:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Submit") %>
+<% end %>
+<%= form_tag("/RepresentativeController", method: "get") do %>
+  <%= label_tag(:q, "Zip Code:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+
+
+<%= form_tag do |f| %>
+<%= select_tag("Issue Option", options_for_select(@issues)) %>
+<%=submit_tag("Submit")%>
+<%end%>

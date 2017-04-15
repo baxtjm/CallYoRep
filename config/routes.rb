@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'zip#home'
+  post "/zip" => "/rep_lookup"
 
 
 

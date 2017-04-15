@@ -17,13 +17,12 @@
 <%end%>
 </div>
 
+<div>
 
 <%= form_tag do %>
 <%= select_tag("rep_choice", options_for_select(@phones)) %>
+
 <%= select_tag("stance", options_for_select(@stances)) %>
 <%=submit_tag"Submit"%>
 <%end%>
-
-<div>
-  <%=params.keys%>
 </div>

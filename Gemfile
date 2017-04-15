@@ -40,6 +40,7 @@ group :development, :test do
   gem 'httparty'
   gem 'hirb'
   gem 'dotenv'
+  gem 'seed_dump'
 
 end
 

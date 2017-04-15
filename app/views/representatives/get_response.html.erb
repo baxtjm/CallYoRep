@@ -19,7 +19,7 @@
 
 <div>
 
-<%= form_tag do %>
+<%= form_tag("/rep", method: :post) do %>
 <%= select_tag("rep_choice", options_for_select(@phones)) %>
 <%= select_tag("stance", options_for_select(@stances)) %>
 <%= hidden_field_tag 'zip', @zip%>

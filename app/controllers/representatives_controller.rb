@@ -1,9 +1,8 @@
 class RepresentativesController < ApplicationController
-
+before_action :set_issue
   def get_response
 
     @zip = params[:zip]
-    @issue = Issue.find_by_topic("planned_parenthood").id #params[:issue]
     @response = HTTParty.get("http://whoismyrepresentative.com/getall_mems.php?zip=#{@zip}&output=json", format: :plain)
     @congress = HTTParty.get("https://raw.githubusercontent.com/unitedstates/congress-legislators/master/alternate_formats/legislators-current.json", format: :plain)
 
@@ -12,6 +11,10 @@ class RepresentativesController < ApplicationController
     @info = []
     @names = []
     @phones = []
+    @stances = []
+  Message.where(issue_id: Issue.find_by_topic(@issue).id).find_each do |x|
+      @stances << [x.stance, x.position]
+    end
 
     @reps.each do |rep|
       @names << rep[:name]
@@ -27,5 +30,9 @@ class RepresentativesController < ApplicationController
         end
      end
   end
+
+def set_issue
+  @issue= "planned_parenthood" #params[:topic]
+end
 
 end

@@ -26,7 +26,7 @@ def set_phone
 end
 
 def set_message
-  @position= params[:pos].key("Submit")
+  @position= params[:stance]
 end
 
 

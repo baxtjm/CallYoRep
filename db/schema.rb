@@ -38,10 +38,10 @@ ActiveRecord::Schema.define(version: 20170415222531) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "zip"
-    t.integer  "call_id"
-    t.index ["call_id"], name: "index_users_on_call_id", using: :btree
+    t.integer  "message_id"
+    t.index ["message_id"], name: "index_users_on_message_id", using: :btree
   end
 
   add_foreign_key "messages", "issues"
-  add_foreign_key "users", "messages", column: "call_id"
+  add_foreign_key "users", "messages"
 end

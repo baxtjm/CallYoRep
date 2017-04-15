@@ -29,6 +29,9 @@ before_action :set_issue
           end
         end
      end
+     if @phones != []
+       redirect_to "rep"
+     end
   end
 
 def set_issue

@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
-  root 'zip#home'
-  post "/zip" => "/rep_lookup"
+  get "/" => 'zip#home'
 
   post "/" => "representatives#get_response"
 
+  get "/rep" => "representatives#get_response"
+  post "/rep" => "twilio#phone_call"
 
 
   # get "/rep_lookup" =>"representatives#get_response"
 
-  post "/rep_lookup" => "twilio#phone_call"
 
   post 'twilio/voice' => 'twilio#voice'
 

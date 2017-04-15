@@ -21,8 +21,8 @@
 
 <%= form_tag do %>
 <%= select_tag("rep_choice", options_for_select(@phones)) %>
-
 <%= select_tag("stance", options_for_select(@stances)) %>
+<%= hidden_field_tag 'zip', @zip%>
 <%=submit_tag"Submit"%>
 <%end%>
 </div>

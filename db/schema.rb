@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170415213255) do
+ActiveRecord::Schema.define(version: 20170415222531) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "issues", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.string   "topic"
+    t.string   "readable_name"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -37,10 +38,10 @@ ActiveRecord::Schema.define(version: 20170415213255) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "zip"
-    t.integer  "message_id"
-    t.index ["message_id"], name: "index_users_on_message_id", using: :btree
+    t.integer  "call_id"
+    t.index ["call_id"], name: "index_users_on_call_id", using: :btree
   end
 
   add_foreign_key "messages", "issues"
-  add_foreign_key "users", "messages"
+  add_foreign_key "users", "messages", column: "call_id"
 end

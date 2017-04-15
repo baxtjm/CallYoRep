@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   root 'zip#home'
 
+  post "/" => "representatives#get_response"
 
 
-  get "/rep_lookup" =>"representatives#get_response"
+
+  # get "/rep_lookup" =>"representatives#get_response"
 
   post "/rep_lookup" => "twilio#phone_call"
 

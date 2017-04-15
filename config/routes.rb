@@ -1,6 +1,8 @@
 
 
 Rails.application.routes.draw do
+  root 'representatives#home'
+
 
 
   get "/rep_lookup" =>"representatives#get_response"

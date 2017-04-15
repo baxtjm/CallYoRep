@@ -3,7 +3,7 @@ class RepresentativesController < ApplicationController
   def get_response
 
     @zip = params[:zip]
-
+    @issue = Issue.find_by_topic("planned_parenthood").id #params[:issue]
     @response = HTTParty.get("http://whoismyrepresentative.com/getall_mems.php?zip=#{@zip}&output=json", format: :plain)
     @congress = HTTParty.get("https://raw.githubusercontent.com/unitedstates/congress-legislators/master/alternate_formats/legislators-current.json", format: :plain)
 

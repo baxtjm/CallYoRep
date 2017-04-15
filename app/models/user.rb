@@ -1,3 +1,3 @@
 class User < ApplicationRecord
-  belongs_to :call
+  belongs_to :message
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170415180222) do
+ActiveRecord::Schema.define(version: 20170415180704) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20170415180222) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "issue_id"
+    t.string   "audio_link"
     t.index ["issue_id"], name: "index_messages_on_issue_id", using: :btree
   end
 

@@ -17,7 +17,7 @@ def phone_call
             :from => "+18573133666",
             :url => Message.find_by_position(@position).audio_link)
             puts @call.to
-
+    redirect_to thanks_path
 end
 
 

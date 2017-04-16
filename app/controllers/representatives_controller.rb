@@ -33,7 +33,7 @@ before_action :set_issue
   end
 
 def set_issue
-  @issue= "planned_parenthood" #params[:topic]
+  @issue= params[:topic]
 end
 
 end

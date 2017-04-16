@@ -5,6 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'httparty'
+gem 'hirb'
+gem 'dotenv'
+gem 'seed_dump'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
 
@@ -40,10 +45,6 @@ gem 'twilio-ruby'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-  gem 'httparty'
-  gem 'hirb'
-  gem 'dotenv'
-  gem 'seed_dump'
 
 end
 

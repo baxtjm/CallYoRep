@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
   <head>
@@ -34,3 +35,16 @@
   </div>
   </body>
 </html>
+=======
+<%= render 'partials/splash_page' %>
+
+<%= form_tag do  %>
+  <%= label_tag("Start by entering your email address:") %>
+  <%= text_field_tag(:name) %></br>
+  <%= label_tag("Then add your current zip code:") %>
+  <%= text_field_tag(:zip) %></br>
+  <%= label_tag("Now select an issue:") %>
+  <%= select_tag("topic", options_for_select(@issues_select)) %>
+  <%=submit_tag("Submit")%>
+<% end %>
+>>>>>>> a0677824b27f96f23bb56e1364aecbc76b20de67

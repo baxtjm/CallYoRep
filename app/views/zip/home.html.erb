@@ -1,11 +1,11 @@
 <%= render 'partials/splash_page' %>
 
 <%= form_tag do  %>
-  <%= label_tag("Please enter your email:") %>
+  <%= label_tag("Start by entering your email address:") %>
   <%= text_field_tag(:name) %></br>
-  <%= label_tag("Zip Code:") %>
+  <%= label_tag("Then add your current zip code:") %>
   <%= text_field_tag(:zip) %></br>
-  <%= label_tag("Select your issue:") %>
+  <%= label_tag("Now select an issue:") %>
   <%= select_tag("topic", options_for_select(@issues_select)) %>
   <%=submit_tag("Submit")%>
 <% end %>

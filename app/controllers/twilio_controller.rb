@@ -22,7 +22,7 @@ end
 
 
 def set_phone
-  @rep = "+15165786248" #params[:rep_choice]
+  @rep = "+19195484308" #params[:rep_choice]
 end
 
 def set_message

@@ -2,8 +2,10 @@
 
 one:
   email: MyString
-  text: MyText
+  zip: MyString
+  message: one
 
 two:
   email: MyString
-  text: MyText
+  zip: MyString
+  message: two

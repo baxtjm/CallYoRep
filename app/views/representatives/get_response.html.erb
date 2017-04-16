@@ -1,5 +1,8 @@
 <%= render 'partials/sub_pages' %>
 <div >
+<%=debug(params)%>
+</div>
+<div >
 
 
 <%@info.each do |rep|%>
@@ -19,11 +22,15 @@
 </div>
 
 <div>
-
 <%= form_tag("/reps", method: :post) do %>
 <%= select_tag("rep_choice", options_for_select(@phones)) %>
 <%= select_tag("stance", options_for_select(@stances)) %>
-<%= hidden_field_tag 'zip', @zip%>
+<%= hidden_field_tag('zip', @zip)%>
+<%= hidden_field_tag('email', @email)%>
 <%=submit_tag"Submit"%>
 <%end%>
 </div>
+<br>
+<br>
+<br>
+<br>

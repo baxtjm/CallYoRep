@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get 'thanks/thanks'
 
-  get "/" => 'zip#home'
+  get "/" => 'zip#home', as: 'home'
 
   post "/" => "representatives#get_response"
 

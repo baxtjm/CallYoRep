@@ -3,11 +3,10 @@ Rails.application.routes.draw do
 
   post "/" => "representatives#get_response"
 
-  get "/rep" => "representatives#get_response"
-  post "/rep" => "twilio#phone_call"
+  get "/reps" => "representatives#get_response"
+  post "/reps" => "twilio#phone_call"
 
 
-  # get "/rep_lookup" =>"representatives#get_response"
 
 
   post 'twilio/voice' => 'twilio#voice'

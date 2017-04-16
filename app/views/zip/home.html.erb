@@ -1,5 +1,5 @@
 <%= form_tag do  %>
-  <%= label_tag(:q, "Zip Code:") %>
+  <%= label_tag("Zip Code:") %>
   <%= text_field_tag(:zip) %>
   <%= select_tag("topic", options_for_select(@issues_select)) %>
   <%=submit_tag("Submit")%>

@@ -6,7 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 gem 'spring'
-
+gem 'hirb'
+gem 'seed_dump'
 gem 'httparty'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -55,8 +56,6 @@ group :development do
 
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'rails-erd'
-  gem 'hirb'
-  gem 'seed_dump'
   gem 'dotenv'
 end
 

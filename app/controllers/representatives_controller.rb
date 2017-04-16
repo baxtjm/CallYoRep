@@ -3,6 +3,7 @@ before_action :set_issue
   def get_response
 
     @zip = params[:zip]
+    @email=params[:email]
     @response = HTTParty.get("http://whoismyrepresentative.com/getall_mems.php?zip=#{@zip}&output=json", format: :plain)
     @congress = HTTParty.get("https://raw.githubusercontent.com/unitedstates/congress-legislators/master/alternate_formats/legislators-current.json", format: :plain)
 
@@ -30,8 +31,11 @@ before_action :set_issue
         end
      end
 
+
+
   end
 
+private
 def set_issue
   @issue= params[:topic]
 end

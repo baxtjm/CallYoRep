@@ -18,7 +18,7 @@ def phone_call
             :url => Message.find_by_position(@position).audio_link)
             puts @call.to
 
-    user = User.create(zip: @zip, email: @email, message_id: Message.find_by_position(@position).id.to_i, rep: @rep)
+    user = User.create(zip: @zip, email: lewisetest, message_id: Message.find_by_position(@position).id.to_i, rep: @rep)
     redirect_to thanks_path
 end
 

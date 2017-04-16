@@ -1,50 +1,27 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
+
     <title>FindYoRep</title>
   </head>
   <body>
-    <div id="main-container" class="container-fluid">
-      <div class="row">
-        <div class="col-md-6">
-          <h3>Tealeaf Academy Todo</h3>
-        </div>
-        <div class="col-xs-9">
-          <h1>Tester</h1>
-          <%= yield %>
-        </div>
-      </div>
+    
+    <%= render 'partials/splash_page' %>
 
-    <form>
-      <div class="form-group">
-      <%= form_tag do  %>
-        <%= label_tag("Email:") %>
-        <%= text_field_tag(:email) %></br>
-        <%= label_tag("Zip Code:") %>
-        <%= text_field_tag(:zip) %></br>
-        <%= label_tag("Select Your Issue:") %>
-        <%= select_tag("topic", options_for_select(@issues_select)) %></br>
-        <%=submit_tag("Submit")%>
-      <% end %>
-      </div>
-    </form>
+    <%= form_tag do  %>
+      <%= label_tag("Start by entering your email address:") %>
+      <%= text_field_tag(:name) %></br>
+      <%= label_tag("Then add your current zip code:") %>
+      <%= text_field_tag(:zip) %></br>
+      <%= label_tag("Now select an issue:") %>
+      <%= select_tag("topic", options_for_select(@issues_select)) %>
+      <%=submit_tag("Submit")%>
+    <% end %>
 
 
-  </div>
   </body>
-</html>
-=======
-<%= render 'partials/splash_page' %>
 
-<%= form_tag do  %>
-  <%= label_tag("Start by entering your email address:") %>
-  <%= text_field_tag(:name) %></br>
-  <%= label_tag("Then add your current zip code:") %>
-  <%= text_field_tag(:zip) %></br>
-  <%= label_tag("Now select an issue:") %>
-  <%= select_tag("topic", options_for_select(@issues_select)) %>
-  <%=submit_tag("Submit")%>
-<% end %>
->>>>>>> a0677824b27f96f23bb56e1364aecbc76b20de67
+
+
+

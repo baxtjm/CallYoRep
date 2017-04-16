@@ -15,6 +15,17 @@ code {
   font-size: 80%;
 }
 
+
+/* Representatives
+-------------------------------------------------- */
+figure {
+  position:relative;
+  display: inline-block;
+  float: left;
+  margin: auto;
+  padding:60px;
+  }
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {

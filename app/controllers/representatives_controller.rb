@@ -30,6 +30,8 @@ before_action :set_issue
           end
         end
      end
+     @phones << ["Donald Trump", "202-456-1111"]
+     @info << ["Donald Trump", "Republican", "POTUS", "202-456-1111", "http://wsd-cornelius.s3-website-us-west-2.amazonaws.com/images/candidates/donaldtrump.jpg"]
 
 
 

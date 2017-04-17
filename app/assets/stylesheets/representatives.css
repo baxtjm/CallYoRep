@@ -35,8 +35,8 @@ figure {
   padding:60px;
   }
 
-#representativepage {
-  float: left;
+#frontform{
+top: 50%;
 }
 /* Sticky footer styles
 -------------------------------------------------- */

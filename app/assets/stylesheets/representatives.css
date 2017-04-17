@@ -35,8 +35,16 @@ figure {
   padding:60px;
   }
 
-#frontform{
-top: 50%;
+#rep_form {
+  position: fixed;
+  left: 0;
+  margin-top: -10%;
+  margin-left: -90px;
+  display: block;
+}
+
+#overall {
+  min-height: 1000px;
 }
 /* Sticky footer styles
 -------------------------------------------------- */

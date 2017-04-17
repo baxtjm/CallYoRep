@@ -1,4 +1,4 @@
-<%= render 'partials/sub_pages' %>
+<%= render 'partials/rep_header' %>
 
 
 
@@ -30,9 +30,13 @@
   <%end%>
 </div>
 
-<div id="frontform">
+</br>
+</br>
+</br>
 
-<%= form_tag("/call", method: :post) do %>
+
+
+<%= form_tag "/call", method: :post, id: "rep_form"  do %>
 <%= select_tag("rep_choice", options_for_select(@phones)) %>
 <%= select_tag("stance", options_for_select(@stances)) %>
 <%= hidden_field_tag('zip', @zip)%>
@@ -40,8 +44,4 @@
 <%=submit_tag "Submit" %>
 <%end%>
 
-</div>
-<br>
-<br>
-<br>
-<br>
+<%= render 'partials/rep_footer' %>

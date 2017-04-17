@@ -27,6 +27,11 @@ code {
   font-size: 80%;
 }
 
+#group_photo {
+  margin-bottom: 30px;
+  
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {

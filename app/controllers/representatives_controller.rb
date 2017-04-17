@@ -36,7 +36,11 @@ before_action :set_issue, :set_zip, :set_email
        end
      end
      @phones << ["Donald Trump", "202-456-1111"]
+     @phones << ["Jeff Baxt", "516-578-6248"]
      @info << ["Donald Trump", "Republican", "POTUS", "202-456-1111", "http://wsd-cornelius.s3-website-us-west-2.amazonaws.com/images/candidates/donaldtrump.jpg"]
+     @info << ["Jeff Baxt", "Democrat", "Cool Dude", "516-578-6248", "http://i63.tinypic.com/21bn6v4.jpg"]
+
+
 
 
 
@@ -48,7 +52,7 @@ private
   end
 
   def set_zip
-    if params[:zip]=="" 
+    if params[:zip]==""
       redirect_to("/lookup", notice: "Please enter a real zip code.  Note that Washington DC zips do not work.")
     else
     @zip=params[:zip].to_i

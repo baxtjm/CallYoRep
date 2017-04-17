@@ -27,7 +27,7 @@ end
 private
 
   def set_phone
-    @phone = "9195484308" #params[:rep_choice].last
+    @phone = params[:rep_choice]
   end
 
   def set_message

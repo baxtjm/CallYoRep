@@ -54,3 +54,7 @@ form {
   display: inline-block;
   text-align: right;
 }
+
+#frontform {
+  margin-top: 20%;
+}

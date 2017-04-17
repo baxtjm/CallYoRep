@@ -1,5 +1,16 @@
 <%= render 'partials/sub_pages' %>
 
-<h1>Thanks!</h1>
+<title id="title">FindYoRep</title>
 
-<%= link_to "Call again!", home_path %>
+
+<div id ="div-button">
+<button id="myButton" class="glyphicon glyphicon-repeat" >
+
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "/";
+    };
+</script>
+
+</button>
+</div>

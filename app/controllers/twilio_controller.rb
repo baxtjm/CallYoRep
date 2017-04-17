@@ -27,7 +27,7 @@ end
 private
 
   def set_phone
-    @phone = "5165786248" #params[:rep_choice].last
+    @phone = "9195484308" #params[:rep_choice].last
   end
 
   def set_message
@@ -47,6 +47,8 @@ private
     @reps.each do |rep|
          if rep[:phone] == params[:rep_choice]
            @rep = rep[:name]
+         elsif params[:rep_choice] == "202-456-1111"
+           @rep = "Donald Trump"
          end
        end
   end

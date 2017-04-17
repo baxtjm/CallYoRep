@@ -6,7 +6,12 @@
   <%@info.each do |rep|%>
   <div>
     <figure>
-      <img src="https://theunitedstates.io/images/congress/225x275/<%=rep.last%>.jpg" alt="">
+      <% unless rep.last == "http://wsd-cornelius.s3-website-us-west-2.amazonaws.com/images/candidates/donaldtrump.jpg"%>
+      <%@bioguide_id = rep.last%>
+      <img src="https://theunitedstates.io/images/congress/225x275/<%=@bioguide_id%>.jpg" alt="Congress">
+      <%else%>
+      <img src= <%=rep.last%> alt="POTUS">
+      <%end%>
       <figcaption>
         <%rep.each do |x|%>
         <%if x == rep.last%>

@@ -1,13 +1,13 @@
 
 
-    <%unless flash[:notice] == ""%>
+    <%unless flash[:notice] == nil%>
     <div class="alert alert-warning" role="alert">
       <strong>Warning!</strong> <%=flash[:notice]%>
     </div>
     <%else%>
     <%end%>
 
-  
+
 
 <%= render 'partials/splash_page' %>
 </br></br>
@@ -29,4 +29,3 @@
     <% end %>
 
   </div>
-

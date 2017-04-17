@@ -35,6 +35,9 @@ figure {
   padding:60px;
   }
 
+#representativepage {
+  float: left;
+}
 /* Sticky footer styles
 -------------------------------------------------- */
 html {

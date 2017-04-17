@@ -1,3 +1,14 @@
+
+
+    <%unless flash[:notice] == ""%>
+    <div class="alert alert-warning" role="alert">
+      <strong>Warning!</strong> <%=flash[:notice]%>
+    </div>
+    <%else%>
+    <%end%>
+
+  
+
 <%= render 'partials/splash_page' %>
 </br></br>
 <div id="splashpicture">
@@ -6,13 +17,16 @@
 
 
 <div class="container-fluid">
-    <%= form_tag do  %>
+   <%= form_tag("/reps", method: :post) do  %>
+
       <%= label_tag("Start by entering your email address:") %>
       <%= text_field_tag(:email) %></br>
-      <%= label_tag("Then add your current zip code:") %>
+      <%= label_tag("Then add your 5-digit zip code:") %>
       <%= text_field_tag(:zip) %></br>
       <%= label_tag("Now select an issue:") %>
       <%= select_tag("topic", options_for_select(@issues_select)) %>
       <%=submit_tag("Submit")%>
     <% end %>
+
   </div>
+

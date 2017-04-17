@@ -5,14 +5,11 @@ class ZipController < ApplicationController
 
     @issues_select = []
     Issue.find_each do |x|
-    @issues_select  << [x.readable_name, x.topic] #might be able to remove a topic
+    @issues_select  << [x.readable_name, x.topic]
 
   end
 
 
-  end
-
-  def contact
   end
 
 

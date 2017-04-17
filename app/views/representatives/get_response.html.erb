@@ -7,10 +7,12 @@
   <%@info.each do |rep|%>
   <div>
     <figure>
-      <% unless rep.last == "http://wsd-cornelius.s3-website-us-west-2.amazonaws.com/images/candidates/donaldtrump.jpg"%>
+      <% unless rep.last.include?("http") %>
       <%@bioguide_id = rep.last%>
+
       <img src="https://theunitedstates.io/images/congress/225x275/<%=@bioguide_id%>.jpg" alt="Congress">
       <%else%>
+
       <img src= <%=rep.last%> alt="POTUS">
       <%end%>
       <figcaption>

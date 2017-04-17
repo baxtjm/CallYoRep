@@ -1,9 +1,10 @@
-    <%= render 'partials/splash_page' %>
+<%= render 'partials/splash_page' %>
 <div id="splashpicture">
-<img src="https://img.rt.com/files/news/33/a4/70/00/congress-lets-nsa-spying-continue--.si.jpg" alt="Call Yo Rep" style="margin: 0% 10% 10% 20%">
-</div>
+<img src="https://img.rt.com/files/news/33/a4/70/00/congress-lets-nsa-spying-continue--.si.jpg" alt="Call Yo Rep" style="margin: 0% 10% 30% 20%">
+</div></br>
 
-
+</br></br>
+<div id="frontform"
 <div class="container-fluid">
     <%= form_tag do  %>
       <%= label_tag("Start by entering your email address:") %>
@@ -14,4 +15,5 @@
       <%= select_tag("topic", options_for_select(@issues_select)) %>
       <%=submit_tag("Submit")%>
     <% end %>
+  </div>
   </div>

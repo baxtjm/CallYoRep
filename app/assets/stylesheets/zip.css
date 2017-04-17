@@ -50,3 +50,7 @@ form {
 .style_image {
   border-right: 1px solid #000;
 }
+
+#splashpicture {
+  height: 150px;
+}

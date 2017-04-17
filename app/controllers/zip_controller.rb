@@ -12,6 +12,9 @@ class ZipController < ApplicationController
 
   end
 
+  def contact
+  end
+
 
 
 

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   get "/" => 'zip#home', as: 'home'
+  get "/contact" => 'zip#contact', as: 'contact'
+  get "/privacy" => 'zip#privacy', as: 'privacy'
 
   post "/" => "representatives#get_response"
 

@@ -28,7 +28,7 @@
   <%end%>
 </div>
 
-<div>
+<div id="frontform">
 
 <%= form_tag("/call", method: :post) do %>
 <%= select_tag("rep_choice", options_for_select(@phones)) %>

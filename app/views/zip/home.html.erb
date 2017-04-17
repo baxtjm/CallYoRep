@@ -1,9 +1,5 @@
 
 
-    <%= image_tag "http://www.congressional-maps.com/wp-content/uploads/2016/02/House-of-Representatives.jpg", :style => "margin: 95px" %>
-
-    <%= render 'partials/splash_page' %>
-
     <%unless flash[:notice] == ""%>
     <div class="alert alert-warning" role="alert">
       <strong>Warning!</strong> <%=flash[:notice]%>
@@ -11,7 +7,18 @@
     <%else%>
     <%end%>
 
-    <%= form_tag("/reps", method: :post) do  %>
+  
+
+<%= render 'partials/splash_page' %>
+</br></br>
+<div id="splashpicture">
+<img src="https://img.rt.com/files/news/33/a4/70/00/congress-lets-nsa-spying-continue--.si.jpg" alt="Call Yo Rep" style="margin: 0% 10% 30% 15%">
+</div>
+
+
+<div class="container-fluid">
+   <%= form_tag("/reps", method: :post) do  %>
+
       <%= label_tag("Start by entering your email address:") %>
       <%= text_field_tag(:email) %></br>
       <%= label_tag("Then add your 5-digit zip code:") %>
@@ -20,3 +27,6 @@
       <%= select_tag("topic", options_for_select(@issues_select)) %>
       <%=submit_tag("Submit")%>
     <% end %>
+
+  </div>
+

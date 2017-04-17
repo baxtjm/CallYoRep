@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* Nav bar links
+-------------------------------------------------- */
+a:active {
+  color: black;
+}
+
+/* Body styles
+-------------------------------------------------- */
 
 body > .container {
   padding: 60px 15px 0;
@@ -39,14 +47,14 @@ body {
 }
 
 form {
-    position: absolute;
-    left: -40%;
-    top: 70%;
-    width: 100%;
-    display: inline-block;
-    text-align: right;
+  position: absolute;
+  left: -40%;
+  top: 70%;
+  width: 100%;
+  display: inline-block;
+  text-align: right;
 }
 
-.style_image {
-  border-right: 1px solid #000;
+#frontform {
+  margin-top: 20%;
 }

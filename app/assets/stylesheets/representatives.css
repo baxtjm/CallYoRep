@@ -1,4 +1,13 @@
 
+
+/* Nav bar links
+-------------------------------------------------- */
+a:active {
+  color: black;
+}
+
+/* Body styles
+-------------------------------------------------- */
 body > .container {
   padding: 60px 15px 0;
 }
@@ -26,6 +35,9 @@ figure {
   padding:60px;
   }
 
+#frontform{
+top: 50%;
+}
 /* Sticky footer styles
 -------------------------------------------------- */
 html {

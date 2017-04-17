@@ -46,3 +46,7 @@ form {
     display: inline-block;
     text-align: right;
 }
+
+.style_image {
+  border-right: 1px solid #000;
+}

@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
 
   get "/" => 'zip#home', as: 'home'
+  get "/lookup" => 'zip#home', as: 'retry_lookup'
   get "/contact" => 'zip#contact', as: 'contact'
   get "/privacy" => 'zip#privacy', as: 'privacy'
 
-  post "/" => "representatives#get_response"
+  post "/reps" => "representatives#get_response"
 
   get "/reps" => "representatives#get_response"
-  post "/reps" => "twilio#phone_call"
+  post "/call" => "twilio#phone_call"
 
   get "/thanks" => "thanks#thanks"
 

@@ -1,25 +1,22 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
 
-    <title>FindYoRep</title>
-  </head>
-  <body>
 
     <%= image_tag "http://www.congressional-maps.com/wp-content/uploads/2016/02/House-of-Representatives.jpg", :style => "margin: 95px" %>
 
     <%= render 'partials/splash_page' %>
 
-    <%= form_tag do  %>
+    <%unless flash[:notice] == ""%>
+    <div class="alert alert-warning" role="alert">
+      <strong>Warning!</strong> <%=flash[:notice]%>
+    </div>
+    <%else%>
+    <%end%>
+
+    <%= form_tag("/reps", method: :post) do  %>
       <%= label_tag("Start by entering your email address:") %>
       <%= text_field_tag(:email) %></br>
-      <%= label_tag("Then add your current zip code:") %>
+      <%= label_tag("Then add your 5-digit zip code:") %>
       <%= text_field_tag(:zip) %></br>
       <%= label_tag("Now select an issue:") %>
       <%= select_tag("topic", options_for_select(@issues_select)) %>
       <%=submit_tag("Submit")%>
     <% end %>
-
-
-  </body>

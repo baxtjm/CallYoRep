@@ -2,6 +2,7 @@
 
 
 
+
 <div id = "overall" >
   <%@info.each do |rep|%>
   <div>
@@ -29,7 +30,7 @@
 
 <div>
 
-<%= form_tag("/reps", method: :post) do %>
+<%= form_tag("/call", method: :post) do %>
 <%= select_tag("rep_choice", options_for_select(@phones)) %>
 <%= select_tag("stance", options_for_select(@stances)) %>
 <%= hidden_field_tag('zip', @zip)%>

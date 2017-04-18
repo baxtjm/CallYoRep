@@ -1,5 +1,9 @@
+<%= render 'partials/rep_header' %>
 
 
+
+
+<div id = "overall" >
   <%@info.each do |rep|%>
   <div>
     <figure>
@@ -20,7 +24,15 @@
         <%=x  %>,&nbsp;
         <%end%>
         <%end%>
+      </figcaption>
+    </figure>
+  </div>
+  <%end%>
+</div>
 
+</br>
+</br>
+</br>
 
 
 
@@ -31,3 +43,5 @@
 <%= hidden_field_tag('email', @email)%>
 <%=submit_tag "Submit" %>
 <%end%>
+
+<%= render 'partials/rep_footer' %>

@@ -1,12 +1,6 @@
-<%= render 'partials/rep_header' %>
-
-
-
-
-<div id = "overall" >
   <%@info.each do |rep|%>
-  <div>
-    <figure>
+
+
       <% unless rep.last.include?("http") %>
       <%@bioguide_id = rep.last%>
 
@@ -15,7 +9,7 @@
 
       <img src= <%=rep.last%> alt="POTUS">
       <%end%>
-      <figcaption>
+
         <%rep.each do |x|%>
         <%if x == rep.last%>
         <%elsif x == rep[-2]%>
@@ -24,15 +18,9 @@
         <%=x  %>,&nbsp;
         <%end%>
         <%end%>
-      </figcaption>
-    </figure>
-  </div>
-  <%end%>
-</div>
 
-</br>
-</br>
-</br>
+  <%end%>
+
 
 
 
@@ -43,5 +31,3 @@
 <%= hidden_field_tag('email', @email)%>
 <%=submit_tag "Submit" %>
 <%end%>
-
-<%= render 'partials/rep_footer' %>

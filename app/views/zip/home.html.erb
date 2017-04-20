@@ -1,22 +1,3 @@
-
-
-    <%unless flash[:notice] == nil%>
-    <div class="alert alert-warning" role="alert">
-      <strong>Warning!</strong> <%=flash[:notice]%>
-    </div>
-    <%else%>
-    <%end%>
-
-
-
-<%= render 'partials/splash_page' %>
-</br></br>
-<div id="splashpicture">
-<img src="https://img.rt.com/files/news/33/a4/70/00/congress-lets-nsa-spying-continue--.si.jpg" alt="Call Yo Rep" style="margin: 0% 10% 30% 15%">
-</div>
-
-
-<div class="container-fluid">
    <%= form_tag("/reps", method: :post) do  %>
 
       <%= label_tag("Start by entering your email address:") %>
@@ -27,5 +8,3 @@
       <%= select_tag("topic", options_for_select(@issues_select)) %>
       <%=submit_tag("Submit")%>
     <% end %>
-
-  </div>

@@ -41,7 +41,8 @@ private
   end
 
   def set_rep
-    @response = HTTParty.get("http://whoismyrepresentative.com/getall_mems.php?zip=#{params[:zip]}&output=json", format: :plain)
+    @response = HTTParty.get("http://congress.api.sunlightfoundation.com/legislators/locate?zip=#{@zip}&output=json", format: :plain)
+    # @response = HTTParty.get("http://whoismyrepresentative.com/getall_mems.php?zip=#{params[:zip]}&output=json", format: :plain)
     @reps = (JSON.parse @response, symbolize_names: true)[:results].uniq
 
     @reps.each do |rep|

@@ -2,7 +2,9 @@ class RepresentativesController < ApplicationController
 before_action :set_issue, :set_zip, :set_email
   def get_response
 
-    @response = HTTParty.get("http://whoismyrepresentative.com/getall_mems.php?zip=#{@zip}&output=json", format: :plain)
+    # @response = HTTParty.get("http://whoismyrepresentative.com/getall_mems.php?zip=#{@zip}&output=json", format: :plain)
+    @response = HTTParty.get("http://congress.api.sunlightfoundation.com/legislators/locate?zip=#{@zip}&output=json", format: :plain)
+
     @congress = HTTParty.get("https://raw.githubusercontent.com/unitedstates/congress-legislators/master/alternate_formats/legislators-current.json", format: :plain)
 
     if @response.parsed_response.include?("No Data Found")

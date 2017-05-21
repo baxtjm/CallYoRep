@@ -24,15 +24,15 @@ before_action :set_issue, :set_zip, :set_email
     end
     unless @reps ==nil
       @reps.each do |rep|
-        @names << rep[:name]
+        @names << (rep[:first_name] + " " + rep[:last_name])
       end
 
        @reps.each do |rep|
           @results.each do |data|
-            if rep[:name] == (data[:name][:first] + " " + data[:name][:last])
+            if (rep[:first_name] + " " + rep[:last_name]) == (data[:name][:first] + " " + data[:name][:last])
               @id = data[:id][:bioguide]
-              @info << [rep[:name], rep[:party], rep[:state], rep[:phone], @id]
-              @phones << [rep[:name], rep[:phone]]
+              @info << [(rep[:first_name] + " " + rep[:last_name]), rep[:party], rep[:state], rep[:phone], @id]
+              @phones << [(rep[:first_name] + " " + rep[:last_name]), rep[:phone]]
             end
           end
        end
